@@ -8,18 +8,13 @@ var button = document.querySelector(".greetBtn")
 
 var greeting = FactoryGreeting();
 
-// function textName() {
-//   greeting.checkGreet(name.value)
-//
-// }
 
 function helloFunc(){
   var checkedRadioBtn = document.querySelector("input[name = 'language']:checked")
   if (checkedRadioBtn)
     var input = checkedRadioBtn.value
   greeting.checkGreet(input)
-  displayResult.innerHTML = greeting.checkGreet(name);
-
+  displayResult.innerHTML = greeting.checkGreet();
 }
 
 
