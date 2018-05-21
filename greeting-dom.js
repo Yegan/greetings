@@ -1,23 +1,21 @@
-// DOM Refences
-var name = document.querySelector(".nameEntered");
-var English = document.querySelector(".LanguageBtn")
-var Spanish = document.querySelector(".LanguageBtn")
-var French = document.querySelector(".LanguageBtn")
-var displayResult = document.querySelector(".display")
-var button = document.querySelector(".greetBtn")
+  // DOM Refences
+  var nameVal = document.querySelector(".nameEntered");
+  var displayResult = document.querySelector(".display");
+  var button = document.querySelector(".greetBtn");
+  var resetButton = document.querySelector(".resetBtn")
+  var nameCount = document.querySelector(".countGreetings")
+  //factory function
+  var greeting = FactoryGreeting();
 
-var greeting = FactoryGreeting();
+  function helloFunc() {
+    var name = nameVal.value;
+    var checkedRadioBtn = document.querySelector("input[name = 'language']:checked")
+    if (checkedRadioBtn) {
+      var language = checkedRadioBtn.value;
+      displayResult.innerHTML = greeting.checkGreet(language, name);
+    }
+      nameCount.innerHTML= greeting.count();
+  }
 
-
-function helloFunc(){
-  var checkedRadioBtn = document.querySelector("input[name = 'language']:checked")
-  if (checkedRadioBtn)
-    var input = checkedRadioBtn.value
-  greeting.checkGreet(input)
-  displayResult.innerHTML = greeting.checkGreet();
-}
-
-
-
-// Event listeners
-button.addEventListener("click", helloFunc);
+  // Event listeners
+  button.addEventListener("click", helloFunc);
