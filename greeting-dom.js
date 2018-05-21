@@ -8,13 +8,17 @@
   var greeting = FactoryGreeting();
 
   function helloFunc() {
+
+
     var name = nameVal.value;
     var checkedRadioBtn = document.querySelector("input[name = 'language']:checked")
     if (checkedRadioBtn) {
       var language = checkedRadioBtn.value;
       displayResult.innerHTML = greeting.checkGreet(language, name);
     }
-      nameCount.innerHTML= greeting.count();
+
+
+    nameCount.innerHTML= greeting.count();
   }
 
   // Event listeners
