@@ -3,10 +3,10 @@
 
       var countFunc = FactoryGreeting();
 
-      countFunc.checkGreet('Yegan')
-      countFunc.checkGreet('Andrew')
-      countFunc.checkGreet('Anele')
+      countFunc.checkGreet('English','Yegan');
+      countFunc.checkGreet('English','Andrew');
+      countFunc.checkGreet('English','Anele');
 
-      assert.equal(countFunc.count(), 3)
+      assert.equal(countFunc.count(), 3);
     });
   });
