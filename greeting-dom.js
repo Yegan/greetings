@@ -8,7 +8,7 @@
   var greeting = FactoryGreeting();
 
   function helloFunc() {
-
+    
 
     var name = nameVal.value;
     var checkedRadioBtn = document.querySelector("input[name = 'language']:checked")
