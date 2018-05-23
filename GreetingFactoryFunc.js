@@ -7,10 +7,13 @@
     }
 
     function checkGreet(language, name) {
+      if(name != Number.NaN){
+        return greet + "Please enter a name"
+      }
+
       if (name != '') {
         if (temp[name] === undefined) {
           temp[name] = 0;
-
         }
       }
 
