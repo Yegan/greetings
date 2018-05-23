@@ -5,10 +5,13 @@
   var resetButton = document.querySelector(".resetBtn")
   var nameCount = document.querySelector(".countGreetings")
   //factory function
-  var greeting = FactoryGreeting();
+
+  var item = JSON.parse(localStorage.getItem('key'));
+  var greeting = FactoryGreeting(item);
+  nameCount.innerHTML= greeting.count();
 
   function helloFunc() {
-    
+
 
     var name = nameVal.value;
     var checkedRadioBtn = document.querySelector("input[name = 'language']:checked")
@@ -17,9 +20,20 @@
       displayResult.innerHTML = greeting.checkGreet(language, name);
     }
 
+    localStorage.setItem('key',JSON.stringify(greeting.userMap()));
+
 
     nameCount.innerHTML= greeting.count();
   }
 
+
+
+
   // Event listeners
   button.addEventListener("click", helloFunc);
+  resetButton.addEventListener("click",function(){
+    localStorage.clear();
+    window.location.reload();
+    nameCount.innerHTML = 0;
+
+  });
