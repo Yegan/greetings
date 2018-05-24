@@ -7,7 +7,7 @@
     }
 
     function checkGreet(language, name1) {
-      
+
       if(!isNaN(name1)){
         return  "Please enter a name";
       }
