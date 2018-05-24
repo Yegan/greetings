@@ -35,11 +35,11 @@
 
     it("The count function should keep record/count of the people greeted", function() {
 
-      var countFunc = FactoryGreeting({ "Yegan" : 0 });
-      countFunc.checkGreet('English','Andrew');
+      var countFunc = FactoryGreeting({ "yegan" : 0 });
+      countFunc.checkGreet('English','andrew');
       assert.deepEqual(countFunc.userMap(), {
-        "Yegan" : 0,
-        "Andrew" : 0
+        "yegan" : 0,
+        "andrew" : 0
       });
 
     });

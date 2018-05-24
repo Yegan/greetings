@@ -27,6 +27,9 @@
       if (language === "French") {
         greet = 'Bonjour ' + name;
       }
+     // if (language == '' && name == ''){
+     //    greet = 'Please enter a name and language'
+     //  }
 
       return greet;
     }

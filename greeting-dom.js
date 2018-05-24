@@ -20,10 +20,15 @@
       displayResult.innerHTML = greeting.checkGreet(language, name);
     }
 
+    if ( displayResult.innerHTML == ''){
+         displayResult.innerHTML = 'Please enter a name and language'
+     }
+
     localStorage.setItem('key',JSON.stringify(greeting.userMap()));
 
 
     nameCount.innerHTML= greeting.count();
+    
   }
 
 
