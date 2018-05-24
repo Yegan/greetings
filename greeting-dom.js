@@ -26,9 +26,8 @@
 
     localStorage.setItem('key',JSON.stringify(greeting.userMap()));
 
-
     nameCount.innerHTML= greeting.count();
-    
+
   }
 
 
