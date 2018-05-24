@@ -6,12 +6,13 @@
       temp = people;
     }
 
-    function checkGreet(language, name) {
-      if(name != Number.NaN){
-        return greet + "Please enter a name"
+    function checkGreet(language, name1) {
+      
+      if(!isNaN(name1)){
+        return  "Please enter a name";
       }
-
-      if (name != '') {
+       var name = name1.toLowerCase();
+      if (name !== '') {
         if (temp[name] === undefined) {
           temp[name] = 0;
         }
